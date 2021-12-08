@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <div class="keys">
+    <div class="key A">
+      <kbd>A</kbd>
+      <span class="sound">clap</span>
+    </div>
+    <div class="key S">
+      <kbd>S</kbd>
+      <span class="sound">hihat</span>
+    </div>
+    <div class="key D">
+      <kbd>D</kbd>
+      <span class="sound">kick</span>
+    </div>
+    <div class="key F">
+      <kbd>F</kbd>
+      <span class="sound">openhat</span>
+    </div>
+    <div class="key G">
+      <kbd>G</kbd>
+      <span class="sound">boom</span>
+    </div>
+    <div class="key H">
+      <kbd>H</kbd>
+      <span class="sound">ride</span>
+    </div>
+    <div class="key J">
+      <kbd>J</kbd>
+      <span class="sound">snare</span>
+    </div>
+    <div class="key K">
+      <kbd>K</kbd>
+      <span class="sound">tom</span>
+    </div>
+    <div class="key L">
+      <kbd>L</kbd>
+      <span class="sound">tink</span>
+    </div>
+  </div>
+
+  <script>
+    for (i = 0; i < document.querySelectorAll('.key').length; i++) {
+      document.querySelectorAll('.key')[i].addEventListener("click", function() {
+        console.log(this);
+        makeSound(this.firstElementChild.innerHTML);
+        highlight(this.firstElementChild.innerHTML);
+      });
+    }
+
+    document.addEventListener('keydown', function(event) {
+      makeSound(event.key.toUpperCase());
+      highlight(event.key.toUpperCase());
+    });
+
+    function makeSound(key) {
+      sounds = new Map([
+        ["A", 'sounds/clap.wav'],
+        ["S", 'sounds/hihat.wav'],
+        ["D", 'sounds/kick.wav'],
+        ["F", 'sounds/openhat.wav'],
+        ["G", 'sounds/boom.wav'],
+        ["H", 'sounds/ride.wav'],
+        ["J", 'sounds/snare.wav'],
+        ["K", 'sounds/tom.wav'],
+        ["L", 'sounds/tink.wav'],
+      ]);
+      var audio = new Audio(sounds.get(key));
+      audio.play();
+    }
+
+    function highlight(key) {
+      document.querySelector('.' + key).classList.add('playing');
+      setTimeout(function() {
+        document.querySelector('.' + key).classList.remove('playing')
+      }, 100)
+    }
+  </script>
+
+
+</body>
+
+</html>

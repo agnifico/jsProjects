@@ -1,0 +1,169 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.container-fluid {
+  padding: 3% 10% 10%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/* Headings */
+.big-heading {
+  color: white;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+#title {
+  background-color: #ff4c68;
+}
+
+@media (max-width: 1028px) {
+  #title {
+    text-align: center;
+  }
+}
+
+
+
+/* Navigation Bar */
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+  font-family: 'Ubuntu';
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+/* download buttons */
+
+.dl-btn {
+  margin: 5% 3% 5% 0;
+}
+
+/* title image */
+.title-image {
+  margin-left: 20%;
+  width: 60%;
+  transform: rotate(20deg);
+  position: absolute;
+}
+
+@media (max-width: 1028px) {
+  .title-image {
+    margin-right: 120px;
+    position: static;
+    transform: rotate(0);
+  }
+}
+
+/* Features */
+#features {
+  background-color: white;
+  position: relative;
+  z-index: 1;
+  padding: 7% 15%;
+}
+
+.row {}
+
+.feature-box {
+  text-align: center;
+  padding: 5%;
+}
+
+.feature-icons {
+  font-size: 3.5rem;
+  color: #ef8172;
+  padding: 18px;
+}
+
+.feature-icons:hover {
+  font-size: 3.5rem;
+  color: #ff4c68;
+  padding: 18px;
+}
+
+/* Testimonials section  */
+#testimonials {
+  padding: 7% 15%;
+  text-align: center;
+  background-color: #ef8172;
+  color: white;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+#press {
+  padding-bottom: 3%;
+  text-align: center;
+  background-color: #ef8172;
+}
+
+.press-img {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* Pricing section  */
+#pricing {
+  padding: 7% 7%;
+  text-align: center;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+/* CTA section  */
+#cta {
+  background-color: #ff4c68;
+  color: white;
+  text-align: center;
+  padding: 7% 15%;
+}
+
+.cta-title {
+  padding-bottom: 10%;
+  font-size: 2.8rem;
+}
+
+#footer {
+  text-align: center;
+  padding: 7% 15%;
+}
+
+.footer-icons-row {
+  /* padding: 50px; */
+}
+
+.footer-icon {
+  margin: 20px 10px;
+  font-size: 1.7rem;
+}
