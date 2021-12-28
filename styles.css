@@ -15,25 +15,26 @@ a, a:hover {
   font-family: 'Inconsolata', monospace;
 }
 
+.card-deck {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 10%;
+}
+
 .card-custom {
-  width: 250px;
+  /* text-align: center; */
+  width: 200px;
   height: 250px;
   border: 0;
-  border-radius: 30px;
-  text-align: center;
-  justify-content: center;
+  border-radius: 20px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0);
   cursor: pointer;
   transition: 0.4s;
   color: white;
   font-family: 'Arvo', serif;
   font-weight: 600;
-  transition: 0.5s;
-}
-
-p {
-  font-family: 'Inconsolata', monospace;
-  font-weight: 400;
 }
 
 .card-custom:hover {
@@ -41,17 +42,25 @@ p {
   color: black;
 }
 
-.flare {
+p {
+  font-family: 'Inconsolata', monospace;
+  font-weight: 400;
+}
+
+
+
+.card:nth-child(3n+0) {
   background-image: linear-gradient(#f12711, #f5af19);
 }
 
-.metapolis {
+.card:nth-child(3n+1) {
   background-image: linear-gradient(#dd3e54, #6be585);
 }
 
-.memariani {
+.card:nth-child(3n+2) {
   background-image: linear-gradient(#aa4b6b, #6b6b83, #3b8d99);
 }
+
 
 .my-card {
   padding: 10%;
